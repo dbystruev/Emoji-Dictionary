@@ -42,20 +42,19 @@ class EmojiTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "emojiCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "emojiCell", for: indexPath) as! EmojiTableViewCell
 
         let emoji = emojis[indexPath.row]
-        cell.textLabel?.text = "\(emoji.symbol) — \(emoji.name)"
-        cell.detailTextLabel?.text = emoji.description
+        cell.update(with: emoji)
         cell.showsReorderControl = true
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let emoji = emojis[indexPath.row]
-        print(#function, emoji.symbol, indexPath)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let emoji = emojis[indexPath.row]
+//        print(#function, emoji.symbol, indexPath)
+//    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -92,14 +91,24 @@ class EmojiTableViewController: UITableViewController {
     }
 
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "EditEmoji" {
+            let indexPath = tableView.indexPathForSelectedRow!
+            let emoji = emojis[indexPath.row]
+            let navController = segue.destination as! UINavigationController
+            let addEditEmojiTableViewController = navController.topViewController as! AddEditEmojiTableViewController
+            addEditEmojiTableViewController.emoji = emoji
+            addEditEmojiTableViewController.navigationItem.title = "Редактировать эмодзи"
+        }
     }
-    */
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        
+    }
 
 }
