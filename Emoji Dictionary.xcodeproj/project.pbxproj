@@ -15,6 +15,7 @@
 		3F1B4AF3219B3E2100AE8A1A /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B4AF2219B3E2100AE8A1A /* Emoji.swift */; };
 		3F8D7209219B4D5C00660F88 /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D7208219B4D5C00660F88 /* EmojiTableViewCell.swift */; };
 		3F8D720B219B557700660F88 /* AddEditEmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D720A219B557700660F88 /* AddEditEmojiTableViewController.swift */; };
+		6953663824B42103005BDBA7 /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = 6953663724B42103005BDBA7 /* Screenshots */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3F1B4AF2219B3E2100AE8A1A /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		3F8D7208219B4D5C00660F88 /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
 		3F8D720A219B557700660F88 /* AddEditEmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditEmojiTableViewController.swift; sourceTree = "<group>"; };
+		6953663724B42103005BDBA7 /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshots; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +62,16 @@
 		3F1B4ADD219B3D1B00AE8A1A /* Emoji Dictionary */ = {
 			isa = PBXGroup;
 			children = (
-				3F1B4ADE219B3D1B00AE8A1A /* AppDelegate.swift */,
-				3F1B4AE2219B3D1B00AE8A1A /* Main.storyboard */,
 				3F8D720A219B557700660F88 /* AddEditEmojiTableViewController.swift */,
+				3F1B4ADE219B3D1B00AE8A1A /* AppDelegate.swift */,
+				3F1B4AE5219B3D1D00AE8A1A /* Assets.xcassets */,
+				3F1B4AF2219B3E2100AE8A1A /* Emoji.swift */,
 				3F8D7208219B4D5C00660F88 /* EmojiTableViewCell.swift */,
 				3F1B4AF0219B3DC900AE8A1A /* EmojiTableViewController.swift */,
-				3F1B4AF2219B3E2100AE8A1A /* Emoji.swift */,
-				3F1B4AE5219B3D1D00AE8A1A /* Assets.xcassets */,
-				3F1B4AE7219B3D1D00AE8A1A /* LaunchScreen.storyboard */,
 				3F1B4AEA219B3D1D00AE8A1A /* Info.plist */,
+				3F1B4AE7219B3D1D00AE8A1A /* LaunchScreen.storyboard */,
+				3F1B4AE2219B3D1B00AE8A1A /* Main.storyboard */,
+				6953663724B42103005BDBA7 /* Screenshots */,
 			);
 			path = "Emoji Dictionary";
 			sourceTree = "<group>";
@@ -105,6 +108,7 @@
 				TargetAttributes = {
 					3F1B4ADA219B3D1B00AE8A1A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -131,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6953663824B42103005BDBA7 /* Screenshots in Resources */,
 				3F1B4AE9219B3D1D00AE8A1A /* LaunchScreen.storyboard in Resources */,
 				3F1B4AE6219B3D1D00AE8A1A /* Assets.xcassets in Resources */,
 				3F1B4AE4219B3D1B00AE8A1A /* Main.storyboard in Resources */,
@@ -295,14 +300,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2020.07.07;
+				DEVELOPMENT_TEAM = 8J39KF9DMS;
 				INFOPLIST_FILE = "Emoji Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "learnSwift.ru.Emoji-Dictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -312,14 +320,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2020.07.07;
+				DEVELOPMENT_TEAM = 8J39KF9DMS;
 				INFOPLIST_FILE = "Emoji Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "learnSwift.ru.Emoji-Dictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
